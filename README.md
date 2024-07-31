@@ -77,7 +77,7 @@ This image comes pre-equipped with the following PowerShell modules:
 | ----------------------------- | :------------------: | ------------------------------------------------------------------------------------------------------ |
 | [Azure Az][6]                 |       `12.1.x`       | [GitHub](https://github.com/Azure/azure-powershell)                                                    |
 | [ExchangeOnlineManagement][7] |       `3.5.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/exchange/ct-p/Exchange)              |
-| [Microsoft.Graph][8]          |       `2.20.x`       | [GitHub](https://github.com/microsoftgraph/msgraph-sdk-powershell)                                     |
+| [Microsoft.Graph][8]          |       `2.21.x`       | [GitHub](https://github.com/microsoftgraph/msgraph-sdk-powershell)                                     |
 | [Microsoft.Graph.Entra][9]    | `0.12.x-preview`[^1] | [GitHub](https://github.com/microsoftgraph/entra-powershell)                                           |
 | [MicrosoftTeams][10]          |       `6.4.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-teams/ct-p/MicrosoftTeams) |
 
