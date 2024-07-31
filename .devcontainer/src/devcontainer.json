@@ -1,0 +1,31 @@
+{
+  "name": "🧑‍💼 Admin Container for Microsoft 365",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "ubuntu",
+      // set devcontainer-cli arg for Dockerfile
+      "devcontainercli": "true"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:2": {
+      "version": "7.4",
+      "setUserDefaultShell": true,
+      "setRootDefaultShell": false,
+      "repositories": "PSGallery",
+      "resources": "Az@[12.1,12.2); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.21,2.22); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.4,6.5); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.defaultLanguage": "powershell",
+        "powershell.integratedConsole.focusConsoleOnExecute": false,
+        "powershell.integratedConsole.showOnStartup": false,
+        "terminal.integrated.defaultProfile.linux": "pwsh"
+      }
+    }
+  }
+}
