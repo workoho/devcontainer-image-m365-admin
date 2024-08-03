@@ -242,9 +242,9 @@ jobs:
       - name: Create Manifest List and Push
         working-directory: /tmp/digests
         run: |
-          docker buildx imagetools create \
-            $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf '${{ env.IMAGE_NAME }}@sha256:%s ' *)
+          TAGS=$(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
+          ANNOTATIONS=$(jq -cr '.annotations | to_entries | map("--annotation " + .key + "=" + .value) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
+          docker buildx imagetools create $TAGS $ANNOTATIONS $(printf '${{ env.IMAGE_NAME }}@sha256:%s ' *)
 
       - name: Inspect Manifest List for Each Tag
         run: |
