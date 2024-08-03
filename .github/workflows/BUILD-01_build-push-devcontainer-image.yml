@@ -235,9 +235,9 @@ jobs:
             type=ref,event=pr
             type=raw,value=latest,enable=${{ startsWith(github.ref, 'refs/tags/v1.') && !contains(github.ref, '-') }}
           annotations: |
-            org.opencontainers.image.description=Pre-built Dev Container Image for Microsoft 365 Admins.
-            org.opencontainers.image.authors=Julian Pawlowski
-            org.opencontainers.image.vendor=Workoho GmbH
+            org.opencontainers.image.description=🧰%20Pre-built%20Dev%20Container%20Image%20for%20Microsoft%20365%20🧑‍💼%20Admins.
+            org.opencontainers.image.authors=Julian%20Pawlowski
+            org.opencontainers.image.vendor=Workoho%20GmbH
           flavor: |
             latest=false
             prefix=
@@ -248,8 +248,6 @@ jobs:
         run: |
           TAGS=$(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
           ANNOTATIONS=$(jq -cr '.annotations | map("--annotation " + @sh) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
-          echo "TAGS: $TAGS"
-          echo "ANNOTATIONS: $ANNOTATIONS"
           docker buildx imagetools create $TAGS $ANNOTATIONS $(printf '${{ env.IMAGE_NAME }}@sha256:%s ' *)
 
       - name: Inspect Manifest List for Each Tag
