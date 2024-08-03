@@ -248,14 +248,14 @@ jobs:
         run: |
           TAGS=$(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
           ANNOTATIONS=$(jq -cr '.annotations | map("--annotation " + @sh) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
-          docker buildx imagetools create $TAGS $ANNOTATIONS $(printf '${{ env.IMAGE_NAME }}@sha256:%s ' *)
+          docker buildx imagetools create $($TAGS) $($ANNOTATIONS) $(printf '${{ env.IMAGE_NAME }}@sha256:%s ' *)
 
       - name: Inspect Manifest List for Each Tag
         run: |
-          tags=$(jq -cr '.tags[]' <<< "$DOCKER_METADATA_OUTPUT_JSON")
-          for tag in $tags; do
-            # Inspecting image: $tag
-            docker buildx imagetools inspect $tag
+          TAGS=$(jq -cr '.tags[]' <<< "$DOCKER_METADATA_OUTPUT_JSON")
+          for TAG in $TAGS; do
+            # Inspecting image: $TAG
+            docker buildx imagetools inspect $TAG
           done
 
   publish-release:
