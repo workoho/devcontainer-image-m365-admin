@@ -3,6 +3,7 @@
     "editorconfig.editorconfig",
     "DavidAnson.vscode-markdownlint",
     "p1c2u.docker-compose",
+    "github.codespaces",
     "github.vscode-github-actions",
     "ms-azuretools.vscode-docker",
     "ms-vscode-remote.remote-containers",

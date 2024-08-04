@@ -19,6 +19,7 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
+        "github.codespaces",
         "github.vscode-github-actions",
         "lizebang.bash-extension-pack",
         "DavidAnson.vscode-markdownlint",
