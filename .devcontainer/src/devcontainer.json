@@ -24,7 +24,7 @@
       "setUserDefaultShell": true,
       "setRootDefaultShell": false,
       "repositories": "PSGallery",
-      "resources": "Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.21,2.22); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)"
+      "resources": "PSScriptTools; Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.21,2.22); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)"
     }
   },
   "customizations": {
