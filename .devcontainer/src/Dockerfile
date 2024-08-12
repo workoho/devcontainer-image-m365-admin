@@ -29,6 +29,7 @@ RUN \
         netcat-openbsd \
         openssh-client \
         # Terminal tools
+        fzf \
         screen \
         tmux \
     # Generate Font Cache
