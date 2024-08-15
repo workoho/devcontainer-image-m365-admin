@@ -20,8 +20,6 @@ RUN \
     && apt-get -y upgrade --no-install-recommends \
     # Install common admin command line tools
     && apt-get install -y --no-install-recommends \
-        # Common tools
-        fontconfig \
         # Networking tools
         dnsutils \
         iputils-arping \
@@ -29,11 +27,10 @@ RUN \
         netcat-openbsd \
         openssh-client \
         # Terminal tools
+        command-not-found \
         fzf \
-        screen \
-        tmux \
-    # Generate Font Cache
-    && fc-cache -f -v \
+        # screen \
+        # tmux \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
     # Move first run notice to right spot
