@@ -41,5 +41,5 @@
     "PSPROFILE_TERMINAL_COMPLETION_PSFZF": "true",
     "PSPROFILE_VSCODE_TERMINAL_COMPLETION_PSFZF": "true"
   },
-  "initializeCommand": "/bin/sh -c '$(which uname) -s > /tmp/host_platform'"
+  "postCreateCommand": "sudo apt-get update"
 }
