@@ -10,21 +10,13 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/jpawlowski/devcontainer-features/cascadia-code:1": {
-      "version": "latest",
-      "installFontconfig": true,
-      "installStaticTTF": true,
-      "installStaticOTF": false,
-      "installStaticWOFF2": false,
-      "installVariableTTF": false,
-      "installVariableWOFF2": false
-    },
     "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:2": {
       "version": "7.4",
       "setUserDefaultShell": true,
       "setRootDefaultShell": false,
       "repositories": "PSGallery",
-      "resources": "PSScriptTools; Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.21,2.22); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)"
+      "resources": "PSScriptTools; Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.22,2.23); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)",
+      "psConfigExperimentalFeatures": "PSCommandNotFoundSuggestion;PSFeedbackProvider;PSSubsystemPluginModel"
     }
   },
   "customizations": {

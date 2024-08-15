@@ -97,14 +97,16 @@ This image comes pre-equipped with the following PowerShell complementary utilit
 | --------------------------------- | :----------: | ---------------------------------------------------------------------------------------------------------- |
 | [Crescendo][11]                   |   `1.1.x`    | [GitHub/PowerShell/Crescendo](https://github.com/PowerShell/Crescendo)                                     |
 | [PSScriptAnalyzer][12]            | `latest`[^2] | [GitHub/PowerShell/PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)                       |
-| [SecretManagement][13]            |   `1.1.x`    | [GitHub/PowerShell/SecretManagement](https://github.com/PowerShell/SecretManagement)                       |
-| [SecretStore][13]                 |   `1.0.x`    | [GitHub/PowerShell/SecretStore](https://github.com/PowerShell/SecretStore)                                 |
-| [TextUtility][14]                 |   `0.1.x`    | [GitHub/PowerShell/TextUtility](https://github.com/PowerShell/TextUtility)                                 |
+| [PSScriptTools][13]               | `latest`     | [GitHub/jdhitsolutions/PSScriptTools](https://github.com/jdhitsolutions/PSScriptTools)                     |
+| [SecretManagement][14]            |   `1.1.x`    | [GitHub/PowerShell/SecretManagement](https://github.com/PowerShell/SecretManagement)                       |
+| [SecretStore][14]                 |   `1.0.x`    | [GitHub/PowerShell/SecretStore](https://github.com/PowerShell/SecretStore)                                 |
+| [TextUtility][15]                 |   `0.1.x`    | [GitHub/PowerShell/TextUtility](https://github.com/PowerShell/TextUtility)                                 |
 
 [11]: https://learn.microsoft.com/en-us/powershell/utility-modules/crescendo/overview
 [12]: https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview
-[13]: https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview
-[14]: https://devblogs.microsoft.com/powershell/microsoft-powershell-textutility-module-updates/
+[13]: https://github.com/jdhitsolutions/PSScriptTools?tab=readme-ov-file#general-tools
+[14]: https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview
+[15]: https://devblogs.microsoft.com/powershell/microsoft-powershell-textutility-module-updates/
 
 ## Other Image Flavors
 
