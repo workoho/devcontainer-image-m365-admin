@@ -25,6 +25,8 @@ on:
 # Environment variables used across all jobs.
 env:
   REGISTRY: ghcr.io
+  IMAGE_DEFINITION: m365
+  IMAGE_VARIANT: admin
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/devcontainers/m365-admin
 
 jobs:
@@ -119,6 +121,23 @@ jobs:
 
           echo "primary_tag_${{ matrix.platform }}=${result_list%%,*}" >> "$GITHUB_OUTPUT"
           echo "tags=$result_list" >> "$GITHUB_OUTPUT"
+
+      - name: Write meta.env
+        run: |
+          if [ "${{ matrix.platform }}" == "amd64" ]; then
+            primary_tag="${{ steps.dcmeta.outputs.primary_tag_amd64 }}"
+          elif [ "${{ matrix.platform }}" == "arm64" ]; then
+            primary_tag="${{ steps.dcmeta.outputs.primary_tag_arm64 }}"
+          fi
+          if [[ "$primary_tag" =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
+            echo "VERSION='$primary_tag'" >> .devcontainer/src/meta.env
+          fi
+          echo "CONTENTS_URL='https://${{ env.IMAGE_NAME }}'" >> .devcontainer/src/meta.env
+          echo "DEFINITION_ID='${{ env.IMAGE_DEFINITION }}'" >> .devcontainer/src/meta.env
+          echo "VARIANT='${{ env.IMAGE_VARIANT }}'" >> .devcontainer/src/meta.env
+          echo "GIT_REPOSITORY='${{ github.server_url }}/${{ github.repository }}'" >> .devcontainer/src/meta.env
+          echo "GIT_REPOSITORY_RELEASE='${{ github.ref_name }}'" >> .devcontainer/src/meta.env
+          echo "BUILD_TIMESTAMP='$(date -u +%Y-%m-%dT%H:%M:%SZ)'" >> .devcontainer/src/meta.env
 
       - name: "[${{ matrix.platform }}] Pre-build Dev Container Image"
         uses: devcontainers/ci@v0.3

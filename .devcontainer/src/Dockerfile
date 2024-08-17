@@ -6,6 +6,7 @@ FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 
 ARG devcontainercli
 
+COPY meta.env /tmp/scripts/
 COPY first-run-notice.txt /tmp/scripts/
 
 RUN \
@@ -31,9 +32,11 @@ RUN \
         fzf \
         # screen \
         # tmux \
-    # Clean up
-    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
     # Move first run notice to right spot
     && mkdir -p "/usr/local/etc/vscode-dev-containers/" \
     && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/ \
-    && rm -rf /tmp/scripts
+    # Move meta.env to right spot
+    && mkdir -p "/usr/local/etc/dev-containers/" \
+    && mv -f /tmp/scripts/meta.env /usr/local/etc/dev-containers/ \
+    # Clean up
+    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/scripts

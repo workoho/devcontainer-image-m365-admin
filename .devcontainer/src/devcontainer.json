@@ -2,6 +2,7 @@
   "name": "🧑‍💼 Admin Container for Microsoft 365",
   "build": {
     "dockerfile": "Dockerfile",
+    "context": ".",
     "args": {
       "VARIANT": "ubuntu",
       // set devcontainer-cli arg for Dockerfile
@@ -27,5 +28,5 @@
       }
     }
   },
-  "postCreateCommand": "sudo apt-get update"
+  "postCreateCommand": "sudo apt-get update -qq > /dev/null"
 }
