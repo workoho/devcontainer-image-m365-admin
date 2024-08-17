@@ -76,37 +76,39 @@ This image comes pre-equipped with the following PowerShell modules:
 | Module                        |     Version Tree     | Resource Link                                                                                          |
 | ----------------------------- | :------------------: | ------------------------------------------------------------------------------------------------------ |
 | [Azure Az][6]                 |       `12.1.x`       | [GitHub](https://github.com/Azure/azure-powershell)                                                    |
-| [ExchangeOnlineManagement][7] |       `3.5.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/exchange/ct-p/Exchange)              |
-| [Microsoft.Graph][8]          |       `2.21.x`       | [GitHub](https://github.com/microsoftgraph/msgraph-sdk-powershell)                                     |
-| [Microsoft.Graph.Entra][9]    | `0.12.x-preview`[^1] | [GitHub](https://github.com/microsoftgraph/entra-powershell)                                           |
-| [MicrosoftTeams][10]          |       `6.4.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-teams/ct-p/MicrosoftTeams) |
+| [EntraExporter][7]            |       `2.0.x`        | [GitHub](https://github.com/microsoft/EntraExporter)                                                   |
+| [ExchangeOnlineManagement][8] |       `3.5.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/exchange/ct-p/Exchange)              |
+| [Microsoft.Graph][9]          |       `2.21.x`       | [GitHub](https://github.com/microsoftgraph/msgraph-sdk-powershell)                                     |
+| [Microsoft.Graph.Entra][10]   | `0.12.x-preview`[^1] | [GitHub](https://github.com/microsoftgraph/entra-powershell)                                           |
+| [MicrosoftTeams][11]          |       `6.4.x`        | [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-teams/ct-p/MicrosoftTeams) |
 
 For a complete list of Microsoft related PowerShell modules, use the [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/).
 
 [6]: https://learn.microsoft.com/en-us/powershell/azure/new-azureps-module-az
-[7]: https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell
-[8]: https://learn.microsoft.com/en-us/powershell/microsoftgraph/?view=graph-powershell-1.0
-[9]: https://learn.microsoft.com/en-us/powershell/entra-powershell/?view=entra-powershell
-[10]: https://learn.microsoft.com/en-us/microsoftteams/teams-powershell-overview
+[7]: https://learn.microsoft.com/en-us/entra/architecture/recoverability-overview
+[8]: https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell
+[9]: https://learn.microsoft.com/en-us/powershell/microsoftgraph/?view=graph-powershell-1.0
+[10]: https://learn.microsoft.com/en-us/powershell/entra-powershell/?view=entra-powershell
+[11]: https://learn.microsoft.com/en-us/microsoftteams/teams-powershell-overview
 
 ### PowerShell Utilities
 
 This image comes pre-equipped with the following PowerShell complementary utilities for basic scripting:
 
-| Module                            | Version Tree | Resource Link                                                                                              |
-| --------------------------------- | :----------: | ---------------------------------------------------------------------------------------------------------- |
-| [Crescendo][11]                   |   `1.1.x`    | [GitHub/PowerShell/Crescendo](https://github.com/PowerShell/Crescendo)                                     |
-| [PSScriptAnalyzer][12]            | `latest`[^2] | [GitHub/PowerShell/PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)                       |
-| [PSScriptTools][13]               | `latest`     | [GitHub/jdhitsolutions/PSScriptTools](https://github.com/jdhitsolutions/PSScriptTools)                     |
-| [SecretManagement][14]            |   `1.1.x`    | [GitHub/PowerShell/SecretManagement](https://github.com/PowerShell/SecretManagement)                       |
-| [SecretStore][14]                 |   `1.0.x`    | [GitHub/PowerShell/SecretStore](https://github.com/PowerShell/SecretStore)                                 |
-| [TextUtility][15]                 |   `0.1.x`    | [GitHub/PowerShell/TextUtility](https://github.com/PowerShell/TextUtility)                                 |
+| Module                 | Version Tree | Resource Link                                             |
+| ---------------------- | :----------: | --------------------------------------------------------- |
+| [Crescendo][12]        |   `1.1.x`    | [GitHub](https://github.com/PowerShell/Crescendo)         |
+| [PSScriptAnalyzer][13] | `latest`[^2] | [GitHub](https://github.com/PowerShell/PSScriptAnalyzer)  |
+| [PSScriptTools][14]    |   `2.50.x`   | [GitHub](https://github.com/jdhitsolutions/PSScriptTools) |
+| [SecretManagement][15] |   `1.1.x`    | [GitHub](https://github.com/PowerShell/SecretManagement)  |
+| [SecretStore][15]      |   `1.0.x`    | [GitHub](https://github.com/PowerShell/SecretStore)       |
+| [TextUtility][16]      |   `0.1.x`    | [GitHub](https://github.com/PowerShell/TextUtility)       |
 
-[11]: https://learn.microsoft.com/en-us/powershell/utility-modules/crescendo/overview
-[12]: https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview
-[13]: https://github.com/jdhitsolutions/PSScriptTools?tab=readme-ov-file#general-tools
-[14]: https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview
-[15]: https://devblogs.microsoft.com/powershell/microsoft-powershell-textutility-module-updates/
+[12]: https://learn.microsoft.com/en-us/powershell/utility-modules/crescendo/overview
+[13]: https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview
+[14]: https://github.com/jdhitsolutions/PSScriptTools?tab=readme-ov-file#general-tools
+[15]: https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview
+[16]: https://devblogs.microsoft.com/powershell/microsoft-powershell-textutility-module-updates/
 
 ## Other Image Flavors
 
@@ -115,7 +117,7 @@ There are other flavors of this dev container image available:
 | Flavor                                                                                                | Audience                                                                 |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [🧑‍💻 Development Container for Microsoft 365](https://github.com/workoho/devcontainer-image-m365-dev)   | An image dedicated to Microsoft 365 Developers and Sophisticated Admins. |
-| [🧑‍🔧 Ultimate Container for Microsoft 365](https://github.com/workoho/devcontainer-image-m365-ultimate) | An image dedicated to Holistic Microsoft 365 & Azure Professionals. |
+| [🧑‍🔧 Ultimate Container for Microsoft 365](https://github.com/workoho/devcontainer-image-m365-ultimate) | An image dedicated to Holistic Microsoft 365 & Azure Professionals.      |
 
 ## License
 

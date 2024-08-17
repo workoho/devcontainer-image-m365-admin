@@ -12,26 +12,20 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:2": {
       "version": "7.4",
-      "setUserDefaultShell": true,
-      "setRootDefaultShell": false,
       "repositories": "PSGallery",
-      "resources": "PSScriptTools; Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); MSCloudLoginAssistant@[1.1,1.2); Microsoft.Graph@[2.22,2.23); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); PnP.PowerShell@[2.5,2.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)",
-      "psConfigExperimentalFeatures": "PSCommandNotFoundSuggestion;PSFeedbackProvider;PSSubsystemPluginModel"
+      "resources": "Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); Microsoft.Graph@[2.22,2.23); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); PSScriptTools@[2.50,2.51); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)",
+      "installOhMyPosh": "true",
+      "installOhMyPoshConfig": "true",
+      "psConfigExperimentalFeatures": "PSCommandNotFoundSuggestion; PSFeedbackProvider; PSSubsystemPluginModel"
     }
   },
   "customizations": {
     "vscode": {
       "settings": {
         "files.defaultLanguage": "powershell",
-        "powershell.integratedConsole.focusConsoleOnExecute": false,
-        "powershell.integratedConsole.showOnStartup": false,
         "terminal.integrated.defaultProfile.linux": "pwsh"
       }
     }
-  },
-  "containerEnv": {
-    "PSPROFILE_TERMINAL_COMPLETION_PSFZF": "true",
-    "PSPROFILE_VSCODE_TERMINAL_COMPLETION_PSFZF": "true"
   },
   "postCreateCommand": "sudo apt-get update"
 }
