@@ -132,6 +132,8 @@ jobs:
           fi
           if [[ "$primary_tag" =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
             echo "VERSION='$primary_tag'" >> ./.devcontainer/src/meta.env
+          else
+            echo "VERSION=''" >> ./.devcontainer/src/meta.env
           fi
           echo "CONTENTS_URL='https://${{ env.IMAGE_NAME }}'" >> ./.devcontainer/src/meta.env
           echo "DEFINITION_ID='${{ env.IMAGE_DEFINITION }}'" >> ./.devcontainer/src/meta.env
