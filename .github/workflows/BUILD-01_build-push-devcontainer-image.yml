@@ -139,6 +139,7 @@ jobs:
           echo "GIT_REPOSITORY='${{ github.server_url }}/${{ github.repository }}'" >> ./.devcontainer/src/meta.env
           echo "GIT_REPOSITORY_RELEASE='${{ github.ref_name }}'" >> ./.devcontainer/src/meta.env
           echo "BUILD_TIMESTAMP='$(date -u +%Y-%m-%dT%H:%M:%SZ)'" >> ./.devcontainer/src/meta.env
+          cat ./.devcontainer/src/meta.env
 
       - name: "[${{ matrix.platform }}] Pre-build Dev Container Image"
         uses: devcontainers/ci@v0.3
