@@ -30,7 +30,9 @@ RUN \
         # Terminal tools
         command-not-found \
         fzf \
+        neovim \
         # screen \
+        thefuck \
         # tmux \
     # Move first run notice to right spot
     && mkdir -p "/usr/local/etc/vscode-dev-containers/" \

@@ -14,7 +14,7 @@
     "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:2": {
       "version": "7.4",
       "repositories": "PSGallery",
-      "resources": "Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); Microsoft.Graph@[2.22,2.23); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); PSScriptTools@[2.50,2.51); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)",
+      "resources": "Az@[12.2,12.3); EntraExporter@[2.0,2.1); ExchangeOnlineManagement@[3.5,3.6); Microsoft.Graph@[2.22,2.23); Microsoft.Graph.Entra@[0.12-preview,1.1); MicrosoftTeams@[6.5,6.6); Microsoft.PowerShell.Crescendo@[1.1,1.2); PSScriptTools@[2.50,2.51); PSFunctionTools@[1.2,1.3); Microsoft.PowerShell.SecretManagement@[1.1,1.2); Microsoft.PowerShell.SecretStore@[1.0,1.1); Microsoft.PowerShell.TextUtility@[0.1,1.1)",
       "installOhMyPosh": "true",
       "installOhMyPoshConfig": "true",
       "psConfigExperimentalFeatures": "PSCommandNotFoundSuggestion; PSFeedbackProvider; PSSubsystemPluginModel"
